@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "base-scouting-2024",
+  "private_key_id": "dc2bb2e1a7e65a9c93f419b40903d14f8ad15973",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC0RKN7DVJVk7P+\nZmAJr0BYyo0DrvGmvDwZJ/Bpy9dnChhK79/afrs5srVIukf0PmLa9OP3XRIiGQ51\n5Ed7KGRPu+Y1+t3Z1pFsUh3yNDCz+SksXBKIhVIrMckRhEd5ppTf3RBWgXpm2oAH\n/lTjN8uvlpQ22ByoqKCtLK/hisUhsR6icKoVOAqE2NXm71UCsmJ6+r+hFF30EkWL\nbieh2y6uHJu3elOvwRxZ8fFIte11dYmDIG7vOYZVO80t9RoEfWdzboeyXAOMRoO3\npSthPoDCa7VDQeOxcGL2WdW9zpAmd88YdN8sd8RWCpVHKJNT5yM/IMD2XMMZoo7v\nPZ2rh99dAgMBAAECggEAQ6lRrTGiWjGOySl22Zu4bLtV83B6DkmvywdlIuiaSHgP\nBy2C2Zlgv7bWeV5F/KRf6WwqlqGN2VOLTG+q7syJ3i2aKl+nXoi9W6l0yQCS2TJn\npFlIsYpM/Z55qEP8qen/DgmFBNsjbLCNhrKM/R3nq1e6+Nzj4OAuMuHHgEHcXRjh\nWbivbMtRF5G3SgHZbmuFyv5xAl/Vtdj4RaM+AFd7G2ibWYnTGTFNqWP4jpidwxgA\npPBu41wV2cmM+EUSrz5iFdy2XQ0E4ti3cmp/oS815kpe/pr4yw0saP6tapkxtun2\nXMQPfqHbQ/Pp2dc9y5ZcHb4C0Va8yabqVxR+vlc25wKBgQD52Y+7LihJxY3Xy7BX\n99MEvPYBloHU0tAAeUbD5a3vt7aB3uD4LW+KB2AhQTd0l/Qjw4eSA7+2Q7RGzQUP\nyLfnQFjLJs6y27XTbYDwKfmog/IlQbueKGCKdB0hEyS4+uds3ei/Ub6CRicuo4nf\na8bquYvZMdu/lyI/CxJ6/jweTwKBgQC4tJrsQRIDMAZqjpDsq1M3WviqMmGfCPjQ\non2F1/Vy194FDRXsnZjGBe9rkDH4gbI1rFp//yPw933j83w+0+79mQphRZNcxhde\nm5lI/jf5s/ajQ72CMXMirGfsG5m+G9Dvsh2juKL6OTvma6jn0b+37h1mSJXo8QXd\n8Y3FXPAIkwKBgEBxpWkaVrnwgs2OdEW8Xmlyc+Gk+If0eEInBeGxdFPIhwKogk6B\nKavoixsIv00LhKVU4br/zIsum2lHqG6Rzx2Os1hzAg2QLi4CqKdJrGOS5PpHIiWB\nNKWBnaHSVj6AOQETm9z9MK5ZefHFrOI74mrYwQGcopmgWez45iNjQA5xAoGALOkF\nDlLYDVxdAwW9KT6TEk+VTNTJNcEZtqj7ulKDRLRGMJY48Xp0ThndWBsMe28VpMVO\nj/a6h3m163oliKVBY/oVMweWyCUGQ6OzxrLBa36dhp8O8hwR8alX72nanQXobI+z\ncz6OqibGcMVWoV83rYJBNcCKasRH9+om3Yk2d+8CgYEAvfMAsY6+AXnIlJ5CEx3T\n87DxrKHK/T+mt8EsO2s2cKYy4LlOzOdhcrPkurkfA5YYmFpecvk6N5dGseVtzif0\ndIJBeUB0QG2WLXIr+WAR6XIGtlRMCs7nTmuY6gq65glLVSp6io+MyrYJoJeLlM/2\n1CzOzUPfEO5Y5lAAHjfeFZ4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "bot-frc@base-scouting-2024.iam.gserviceaccount.com",
+  "client_id": "116382590351265039050",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bot-frc%40base-scouting-2024.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
