@@ -22,7 +22,7 @@ class Hoja:
         
             datos = worksheet.get_all_records()
         
-            df = pd.DataFrame(datos)
+            df = pd.DataFrame(data = datos)
         
             return df
         
@@ -30,10 +30,13 @@ class Hoja:
             st.error(f"Hubo un error:{error}")
             
     def leer_2 (self):
-        url = f'https://docs.google.com/spreadsheets/d/{self.id}/export?fromat=csv'
-        df = pd.DataFrame(data = url)
-    
-        return df
+        try:
+            url = f'https://docs.google.com/spreadsheets/d/{self.id}/export?fromat=csv'
+            df = pd.DataFrame(data = url)
+        
+            return df
+        except Exception as error:
+            st.error(f"Hubo un error:{error}")
     
     def escribir (self,datos):
         try:
