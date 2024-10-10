@@ -12,13 +12,13 @@ class Hoja:
     
     def leer (self):
         try:
-            creds = service.from_json_keyfile_name(self.bot,self.scope)
+            creds = service.from_json_keyfile_name(filename = self.bot, scopes = self.scope)
         
-            client = gs.authorize(creds)
+            client = gs.authorize(credentials = creds)
         
-            sheet = client.open_by_key(self.id)
+            sheet = client.open_by_key(key = self.id)
         
-            worksheet = sheet.get_worksheet(self.hoja)
+            worksheet = sheet.get_worksheet( index = self.hoja)
         
             datos = worksheet.get_all_records()
         
@@ -31,36 +31,36 @@ class Hoja:
             
     def leer_2 (self):
         url = f'https://docs.google.com/spreadsheets/d/{self.id}/export?fromat=csv'
-        df = pd.DataFrame(url)
+        df = pd.DataFrame(data = url)
     
         return df
     
     def escribir (self,datos):
         try:
-            creds = service.from_json_keyfile_name(self.bot,self.scope)
+            creds = service.from_json_keyfile_name(filename = self.bot, scopes = self.scope)
         
-            client = gs.authorize(creds)
+            client = gs.authorize(credentials = creds)
         
-            sheet = client.open_by_key(self.id)
+            sheet = client.open_by_key(key = self.id)
         
-            worksheet = sheet.get_worksheet(self.hoja)
+            worksheet = sheet.get_worksheet(index = self.hoja)
         
-            worksheet.insert_rows(datos,2)
+            worksheet.insert_rows(values = datos, row = 2)
         
         except Exception as error:
             st.error(f"Hubo un error:{error}")
         
     def limpiar (self,rango):
         try:
-            creds = service.from_json_keyfile_name(self.bot,self.scope)
+            creds = service.from_json_keyfile_name(filename = self.bot, scopes = self.scope)
         
-            client = gs.authorize(creds)
+            client = gs.authorize(credentials = creds)
         
-            sheet = client.open_by_key(self.id)
+            sheet = client.open_by_key(key = self.id)
         
-            worksheet = sheet.get_worksheet(self.hoja)
+            worksheet = sheet.get_worksheet(index = self.hoja)
         
-            worksheet.batch_clear(rango)
+            worksheet.batch_clear(ranges = rango)
         
         except Exception as error:
-            st.error(f"Hubo un error:{error}")
+            st.error(f"Hubo un error:{error}") 
