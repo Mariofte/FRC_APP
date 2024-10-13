@@ -30,11 +30,13 @@ def main ():
     
         st.dataframe(hoja.leer(), key='datafraem -- usuario')
 
-        rango_limpiar = st.text_input("Rango a limpiar", key='Rango a limpiar --usuario')
+        rango_limpiar_1 = st.text_input(label = "Rango a limpiar", key='Rango a limpiar 1 --usuario')
+        rango_limpiar_2 = st.text_input(label = "Rango a limpiar", key='Rango a limpiar 2 --usuario')
+        rangos = [[rango_limpiar_1,rango_limpiar_2]]
         boton = st.button("Limpiar", key='Limpiar --usuario')
 
         if boton:
-            hoja.limpiar(rango=rango_limpiar)
+            hoja.limpiar(rango=rangos)
     
     elif opciones == 'Graficas':
         st.balloons()
@@ -43,3 +45,4 @@ if __name__ == '__main__':
     main()
     
 #A2:AF2
+#A3:U3
