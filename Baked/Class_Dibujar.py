@@ -26,8 +26,14 @@ class Dibujar :
             df = pd.DataFrame(datos)
             
         
+        except FileNotFoundError as fnf_error:
+            st.error(f"Archivo de credenciales no encontrado: {fnf_error}")
+        
+        except gs.exceptions.APIError as api_error:
+            st.error(f"Error de la API de Google Sheets: {api_error}")
+        
         except Exception as error:
-            st.error(f"Hubo un error:{error}")
+            st.error(f"Hubo un error: {error}")
         
     def pastel (self): 
         try:
@@ -42,5 +48,12 @@ class Dibujar :
             datos = worksheet.get_all_records()
         
             df = pd.DataFrame(datos)
+            
+        except FileNotFoundError as fnf_error:
+            st.error(f"Archivo de credenciales no encontrado: {fnf_error}")
+        
+        except gs.exceptions.APIError as api_error:
+            st.error(f"Error de la API de Google Sheets: {api_error}")
+        
         except Exception as error:
-            st.error(f"Hubo un error:{error}")
+            st.error(f"Hubo un error: {error}")
