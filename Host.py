@@ -22,7 +22,7 @@ def main ():
     hoja=0
     )
 
-    css(file_name = 'Styles\styles.css')
+    #css(file_name = 'Styles\styles.css')
 
     opciones = st.sidebar.selectbox(label = "Eliga una pagina", options = ["visualizar","Graficas"], key='Eliga una pagina --usuario')
 
