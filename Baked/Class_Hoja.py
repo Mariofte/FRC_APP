@@ -44,7 +44,7 @@ class Hoja:
     def leer_2 (self):
         try:
             url = f'https://docs.google.com/spreadsheets/d/{self.id}/export?fromat=csv'
-            df = pd.DataFrame(data = url)
+            df = pd.read_csv(data = url)
         
             return df
         
