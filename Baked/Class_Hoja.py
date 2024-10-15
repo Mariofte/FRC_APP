@@ -43,7 +43,7 @@ class Hoja:
     # No funciones sin declarar el sheets como vicible para cualquiera con el link
     def leer_2 (self):
         try:
-            url = f'https://docs.google.com/spreadsheets/d/{self.id}/export?fromat=csv'
+            url = f'https://docs.google.com/spreadsheets/d/{self.id}/export?format=csv'
             df = pd.read_csv(data = url)
         
             return df
