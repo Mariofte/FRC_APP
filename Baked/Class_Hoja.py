@@ -36,17 +36,23 @@ class Hoja:
         
         except APIError as api_error:
             st.error(f"Error de la API de Google Sheets: {api_error}")
-        
-        except Exception as error:
-            st.error(f"Hubo un error: {error}")
             
-    # No funciones sin declarar el sheets como vicible para cualquiera con el link
+        except ModuleNotFoundError as merror:
+            st.error(f"No se encontro el modulo:{merror}")
+            
+        except Exception as error:
+            st.error(f"Hubo un error desconocido: {error} infromar a Mario")
+            
+    # No  funciones sin declarar el sheets como vicible para cualquiera con el link
     def leer_2 (self):
         try:
             url = f'https://docs.google.com/spreadsheets/d/{self.id}/export?format=csv'
             df = pd.read_csv(data = url)
         
             return df
+        
+        except ModuleNotFoundError as merror:
+            st.error(f"No se enconto el modulo:{merror}")
         
         except Exception as error:
             st.error(f"Hubo un error:{error}")
@@ -68,9 +74,12 @@ class Hoja:
         
         except APIError as api_error:
             st.error(f"Error de la API de Google Sheets: {api_error}")
-        
+            
+        except ModuleNotFoundError as merror:
+            st.error(f"No se encontro el modulo:{merror}")
+            
         except Exception as error:
-            st.error(f"Hubo un error: {error}")
+            st.error(f"Hubo un error desconocido: {error} infromar a Mario")
         
     # En proceso de mejora
     def limpiar (self,rango):
@@ -90,6 +99,9 @@ class Hoja:
         
         except APIError as api_error:
             st.error(f"Error de la API de Google Sheets: {api_error}")
-        
+            
+        except ModuleNotFoundError as merror:
+            st.error(f"No se encontro el modulo:{merror}")
+            
         except Exception as error:
-            st.error(f"Hubo un error: {error}")
+            st.error(f"Hubo un error desconocido: {error} infromar a Mario")

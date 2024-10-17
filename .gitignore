@@ -1,4 +1,4 @@
-Baked\Servicio.json
-Baked\__pycache__
-Styles\__pycache__
+.Baked\Servicio.json
+.Baked\__pycache__
+.Styles\__pycache__
 .gitignore

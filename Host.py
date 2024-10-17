@@ -29,17 +29,18 @@ def main ():
     if opciones == 'visualizar':
     
         st.dataframe(hoja.leer(), key='datafraem -- usuario')
-
-        rango_limpiar_1 = st.text_input(label = "Rango a limpiar", key='Rango a limpiar 1 --usuario')
-        rango_limpiar_2 = st.text_input(label = "Rango a limpiar", key='Rango a limpiar 2 --usuario')
-        rangos = [[rango_limpiar_1,rango_limpiar_2]]
-        boton = st.button("Limpiar", key='Limpiar --usuario')
-
-        if boton:
-            hoja.limpiar(rango=rangos)
+        
+        #rango_limpiar_1 = st.text_input(label = "Rango a limpiar", key='Rango a limpiar 1 --usuario')
+        #rango_limpiar_2 = st.text_input(label = "Rango a limpiar", key='Rango a limpiar 2 --usuario')
+        #rangos = [[rango_limpiar_1,rango_limpiar_2]]
+        #boton = st.button("Limpiar", key='Limpiar --usuario')
+        
+        #if boton:
+        #   hoja.limpiar(rango=rangos)
+        
     
     elif opciones == 'Graficas':
-        st.balloons()
+        dibujar.Grafica()
         
 if __name__ == '__main__':
     main()
