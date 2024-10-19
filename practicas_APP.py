@@ -1,4 +1,5 @@
 import streamlit as st
+from Baked.Class_resumen import resumen
 from Baked.Class_Hoja import Hoja
 from Baked.Blue_alince import API
 from Styles.fun_css import css
@@ -10,17 +11,10 @@ def main ():
         'https://www.googleapis.com/auth/drive'
         ],
     id='1hApyaC_iw9ms59G1zocLZkfYOP-lX6jX5TI5U4TMSLs',
-    hoja=1
+    hoja=0
     )
-    resumen = Hoja(
-        bot='Baked\Servicio.json',
-    scope=['https://spreadsheets.google.com/feeds', 
-        'https://www.googleapis.com/auth/drive'
-        ],
-    id='1hApyaC_iw9ms59G1zocLZkfYOP-lX6jX5TI5U4TMSLs',
-    hoja=2
-    )
-    # css(file_name = 'Styles\styles.css')
+    
+    #css(file_name = 'Styles\styles.css')
 
     st.title("Cerbotics App Scouthing")
 
@@ -78,7 +72,7 @@ def main ():
 
     if boton:
         crudo.escribir(datos=da)
-        st.success("Se ingrasaron los datos")
+        st.success("Se ingresaron los datos con exito")
         
 if __name__ == '__main__':  
     main()

@@ -10,7 +10,7 @@ def main ():
         'https://www.googleapis.com/auth/drive'
         ],
     id='1hApyaC_iw9ms59G1zocLZkfYOP-lX6jX5TI5U4TMSLs',
-    hoja=0
+    hoja=1
     )
     #css(file_name = 'Styles\styles.css')
 
@@ -27,6 +27,12 @@ def main ():
 
     st.subheader("Autonomo")
 
+    opciones = st.selectbox(label=None, options=["Azul","Rojo"],key= 'imagenes -- auto')
+    if  opciones == 'Azul':
+        st.image(image='Styles\AZUL.png')
+    elif opciones == 'Rojo':
+        st.image(image='Styles\ROJO.png')
+    
     sa = st.radio(label = "Sale de la Zona inicial", options = ["yes","no",], key='Sale de la Zona inicial --auto')
     amp1 = st.number_input(label = "Notas en Amp", min_value = 0, max_value = 100, key='Notas en Amp --auto')
     spe1 = st.number_input(label = "Notas en Speaker", min_value = 0, max_value = 100, key='Notas en Speaker --auto')
