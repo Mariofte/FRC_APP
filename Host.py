@@ -1,6 +1,5 @@
 import streamlit as st
 from Baked.Class_Hoja import Hoja
-from Baked.Class_Dibujar import Dibujar
 from Styles.fun_css import css
 
 def main ():
@@ -13,14 +12,6 @@ def main ():
     hoja=0
     )
 
-    dibujar = Dibujar(
-    bot='Baked\Servicio.json',
-    scope=['https://spreadsheets.google.com/feeds', 
-        'https://www.googleapis.com/auth/drive'
-        ],
-    id='1hApyaC_iw9ms59G1zocLZkfYOP-lX6jX5TI5U4TMSLs',
-    hoja=0
-    )
 
     #css(file_name = 'Styles\styles.css')
 
@@ -40,7 +31,7 @@ def main ():
         
     
     elif opciones == 'Graficas':
-        dibujar.Grafica()
+        st.balloons
         
 if __name__ == '__main__':
     main()

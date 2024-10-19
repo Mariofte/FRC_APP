@@ -28,7 +28,7 @@ def main ():
 
     st.subheader("Autonomo")
 
-    opciones = st.selectbox(label=None, options=["Azul","Rojo"],key= 'imagenes -- auto')
+    opciones = st.selectbox(label="Es coge una imagen", options=["Azul","Rojo"],key= 'imagenes -- auto')
     if  opciones == 'Azul':
         st.image(image='Styles\AZUL.png')
     elif opciones == 'Rojo':
