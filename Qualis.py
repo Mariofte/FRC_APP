@@ -32,12 +32,12 @@ def main ():
         st.image(image='Styles\AZUL.png')
     elif opciones == 'Rojo':
         st.image(image='Styles\ROJO.png')
-    
-    sa = st.radio(label = "Sale de la Zona inicial", options = ["yes","no",], key='Sale de la Zona inicial --auto')
+    pa = st.selectbox(label="Cual es su posicion inicial", options=["Arriba azul","Enmedio azul","A bajo azul","Arriba rojo","Enmedio rojo","A bajo rojo",],key='Cual es su posicion inicial --auto')
+    sa = st.radio(label = "Sale de la Zona inicial", options = ["si","no",], key='Sale de la Zona inicial --auto')
     amp1 = st.number_input(label = "Notas en Amp", min_value = 0, max_value = 100, key='Notas en Amp --auto')
     spe1 = st.number_input(label = "Notas en Speaker", min_value = 0, max_value = 100, key='Notas en Speaker --auto')
     fa1 = st.number_input(label = "Notas Falladas", min_value = 0, max_value = 100, key='Notas falladas --auto')
-    cru = st.radio(label = "Cruzo la Mitad de la Cancha", options = ["yes","no"], key='Cruzo la Mitad de la Cancha --auto')
+    cru = st.radio(label = "Cruzo la Mitad de la Cancha", options = ["si","no"], key='Cruzo la Mitad de la Cancha --auto')
 
     st.subheader("TeleOp")
 
@@ -47,31 +47,36 @@ def main ():
     vamp = st.number_input(label = "Veces Amplificado", min_value = 0, max_value = 100, key='Veces Amplificado --teleop')
     nf = st.number_input(label = "Notas Feeded a otro Robot", min_value = 0, max_value = 100, key='Notas Feeded a otro Robot --teleop')
     nl = st.number_input(label = "Notas que lanza fuera de la cancha",min_value= 0 ,max_value = 100,key='Notas que lanza fuera de la cancha --teleop')
-    da = st.selectbox(label = "De donde agarra",options = ["Source","Suelo","Ambas","No intento"],key='De donde agarra --teleop')
+    dar = st.selectbox(label = "De donde agarra",options = ["Source","Suelo","Ambas","No intento"],key='De donde agarra --teleop')
     
     st.subheader("Endgame")
 
     t = st.text_input(label = "Tiempo de Escalado", key='Teimpo de Escalado --end')
-    po = st.selectbox("Posicion Finalizada",options = ["Parked","Onstage","Onstage (Spotlit)","Harmony","Intentopara","No intento"], key='Posicion Finalizada --end')
-    nt = st.radio(label = "Note en Trap", options = ["yes","no"], key='Nota en Trap --end')
+    po = st.selectbox("Posicion Finalizada",options = ["Parked","Onstage","Intento","No intento"], key='Posicion Finalizada --end')
+    cas = st.radio(label="Intento escalar pero no pudo", options=["si","no"], key='Intento escalar pero no pudo')
+    caw = st.radio(label="Iso harmony", options=["si","no"],key='Iso harmony')
+    cs = st.radio(label="Iso Spotlit", options=["si","no"],key='Iso Spotlit --end')
+    nt = st.radio(label = "Note en Trap", options = ["si","no"], key='Nota en Trap --end')
 
     st.header("Preguntas")
 
     ha = st.selectbox(label = "Habilidad de Driver", options = ["No Effectivo","Promedio","Bastante Efectivo","No observado"], key='Habilidad de Drivar --preguntas')
+    hi = st.text_input(label="Tienen n buen hiuman", key='Tienen n buen hiuman --preguntas')
     lu  = st.selectbox(label = "Lugar de Disparo", options = ["Pegado al Subwoofer","Alejado al subwoofer","Ambas","No intento"], key='Lugar de Disparo --preguntas')
+    bue = st.selectbox(label="Es bueno contra la defensa",options=["si es bueno","no es bueno","muy bueno","no observado"], key='Es bueno contra la defensa --preguntas')
     ni = st.selectbox(label = "Nivel de Defensa", options = ["Debajo del promedio","Promedio","Bueno","Exelente","No jugo defensa"], key='Nivel de Defensa --preguntas')
-    bf = st.radio(label = "Es buen feeder?" , options = ["yes","no"], key='Es buen feeder --preguntas')
+    bf = st.radio(label = "Es buen feeder?" , options = ["si beun feeder","no es beun feeder","no jugo de feeder"], key='Es buen feeder --preguntas')
     ve = st.selectbox(label = "Velocidad", options = ["1 (lento)", "2", "3", "4", "5 (rapido)"], key='Velocidad --preguntas')
-    mi = st.radio(label = "Murio/Inmobilizado ", options=["yes","no"], key='Murio/Inmobilizado --preguntas')
-    ca = st.radio(label = "Casi se cae", options = ["yes","no"], key='Casi se cae --preguntas')
-    no = st.radio(label = "Notas que se le cayeron ", options = ["yes","no"], key='Notas que se le cayeron --preguntas')
-    tar = st.radio(label = "Tarjetas?", options = ["yes","no"], key='Tarjetas? --preguntas')
-    fun = st.radio(label = "Funciona bien el swerve", options = ["yes","no", "no tiene"], key='Funcionea bien el swerve --preguntas')
-    es = st.radio(label = "Lo escogerias de segundo pick?", options = ["yes","no"], key='Lo escogerias de segundo pick? --preguntas')
-    co = st.radio(label = "Hace un buen compañero de alianza", options = ["yes","no"], key='Hace un buen compañero de alianza --preguntas')
+    mi = st.radio(label = "Murio/Inmobilizado ", options=["si","no"], key='Murio/Inmobilizado --preguntas')
+    ca = st.radio(label = "Casi se cae", options = ["si","no"], key='Casi se cae --preguntas')
+    no = st.radio(label = "Notas que se le cayeron ", options = ["si","no"], key='Notas que se le cayeron --preguntas')
+    tar = st.radio(label = "Tarjetas?", options = ["si","no"], key='Tarjetas? --preguntas')
+    fun = st.radio(label = "Funciona bien el swerve", options = ["si","no", "no tiene"], key='Funcionea bien el swerve --preguntas')
+    es = st.radio(label = "Lo escogerias de segundo pick?", options = ["si","no"], key='Lo escogerias de segundo pick? --preguntas')
+    co = st.radio(label = "Hace un buen compañero de alianza", options = ["si","no"], key='Hace un buen compañero de alianza --preguntas')
     com = st.text_area(label = "Comentarios", key = 'Comentarios --preguntas')
 
-    da = [[sco,ti,ma,eq,sa,amp1,spe1,fa1,cru,amp2,spe2,fa2,vamp,nf,nl,da,t,po,nt,ha,lu,ni,bf,ve,mi,ca,no,tar,fun,es,co,com]]
+    da = [[sco,ti,ma,eq,pa,sa,amp1,spe1,fa1,cru,amp2,spe2,fa2,vamp,nf,nl,dar,t,po,cas,caw,cs,nt,ha,hi,lu,bue,ni,bf,ve,mi,ca,no,tar,fun,es,co,com]]
     boton = st.button(label = "Ingresar" , key='Ingresar --usuario')
 
     if boton:
