@@ -8,30 +8,18 @@ def main ():
     scope=['https://spreadsheets.google.com/feeds', 
         'https://www.googleapis.com/auth/drive'
         ],
-    id='1hApyaC_iw9ms59G1zocLZkfYOP-lX6jX5TI5U4TMSLs',
+    id='1UK2mlF74IUYR_ZGuQiuYFo7zt2hCdloaAjjbU7dcv0s',
     hoja=0
     )
+    css(file_name = 'Styles\styles.css')
 
-
-    #css(file_name = 'Styles\styles.css')
-
-    opciones = st.sidebar.selectbox(label = "Eliga una pagina", options = ["visualizar","Graficas"], key='Eliga una pagina --usuario')
+    opciones = st.sidebar.selectbox(label = "Eliga una pagina", options = ["visualizar","resumen"], key='Eliga una pagina --usuario')
 
     if opciones == 'visualizar':
+        st.dataframe(data = hoja.leer(), key='datafraem -- usuario')
     
-        st.dataframe(hoja.leer(), key='datafraem -- usuario')
-        
-        #rango_limpiar_1 = st.text_input(label = "Rango a limpiar", key='Rango a limpiar 1 --usuario')
-        #rango_limpiar_2 = st.text_input(label = "Rango a limpiar", key='Rango a limpiar 2 --usuario')
-        #rangos = [[rango_limpiar_1,rango_limpiar_2]]
-        #boton = st.button("Limpiar", key='Limpiar --usuario')
-        
-        #if boton:
-        #   hoja.limpiar(rango=rangos)
-        
-    
-    elif opciones == 'Graficas':
-        st.balloons
+    elif opciones == "Promedios":
+        pass
         
 if __name__ == '__main__':
     main()

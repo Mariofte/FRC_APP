@@ -1,4 +1,6 @@
 import streamlit as st
+from Baked.Operaciones import promedio
+from Baked.Operaciones import promedio_f
 from Baked.Class_Hoja import Hoja
 from Baked.Blue_alince import API
 from Styles.fun_css import css
@@ -13,7 +15,7 @@ def main ():
     hoja=0
     )
     
-    #css(file_name = 'Styles\styles.css')
+    css(file_name = 'Styles\styles.css')
 
     st.title("Cerbotics App Scouthing")
 
@@ -52,10 +54,10 @@ def main ():
     
     st.subheader("Endgame")
 
-    t = st.text_input(label = "Tiempo de Escalado", key='Teimpo de Escalado --end')
+    t = st.text_input(label = "Tiempo de Escalado", key='Tiempo de Escalado --end')
     po = st.selectbox("Posicion Finalizada",options = ["Parked","Onstage","Intento","No intento"], key='Posicion Finalizada --end')
     cas = st.radio(label="Intento escalar pero no pudo", options=["si","no"], key='Intento escalar pero no pudo')
-    caw = st.radio(label="Iso harmony", options=["si","no"],key='Iso harmony')
+    caw = st.radio(label="Iso harmony", options=["si","no"],key='Iso harmony --end')
     cs = st.radio(label="Iso Spotlit", options=["si","no"],key='Iso Spotlit --end')
     nt = st.radio(label = "Note en Trap", options = ["si","no"], key='Nota en Trap --end')
 
@@ -76,8 +78,10 @@ def main ():
     es = st.radio(label = "Lo escogerias de segundo pick?", options = ["si","no"], key='Lo escogerias de segundo pick? --preguntas')
     co = st.radio(label = "Hace un buen compañero de alianza", options = ["si","no"], key='Hace un buen compañero de alianza --preguntas')
     com = st.text_area(label = "Comentarios", key = 'Comentarios --preguntas')
-
-    da = [[sco,ti,ma,eq,pa,sa,amp1,spe1,fa1,cru,amp2,spe2,fa2,vamp,nf,nl,dar,t,po,cas,caw,cs,nt,ha,hi,lu,bue,ni,bf,ve,mi,ca,no,tar,fun,es,co,com]]
+    
+    pro =promedio(amp1,amp2,spe1,spe2)
+    prof = promedio_f(fa1,fa2)
+    da = [[sco,ti,ma,eq,pa,sa,amp1,spe1,fa1,cru,amp2,spe2,fa2,vamp,nf,nl,dar,t,po,cas,caw,cs,nt,ha,hi,lu,bue,ni,bf,ve,mi,ca,no,tar,fun,es,co,com,pro,prof]]
     boton = st.button(label = "Ingresar" , key='Ingresar --usuario')
 
     if boton:

@@ -12,7 +12,7 @@ def main ():
     id='1hApyaC_iw9ms59G1zocLZkfYOP-lX6jX5TI5U4TMSLs',
     hoja=1
     )
-    #css(file_name = 'Styles\styles.css')
+    css(file_name = 'Styles\styles.css')
 
     st.title("Cerbotics App Scouthing")
 
