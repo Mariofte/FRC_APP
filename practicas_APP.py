@@ -1,8 +1,5 @@
 import streamlit as st
-from Baked.Operaciones import promedio
-from Baked.Operaciones import promedio_f
 from Baked.Class_Hoja import Hoja
-from Baked.Blue_alince import API
 from Styles.fun_css import css
 
 def main ():
@@ -79,9 +76,8 @@ def main ():
     co = st.radio(label = "Hace un buen compañero de alianza", options = ["si","no"], key='Hace un buen compañero de alianza --preguntas')
     com = st.text_area(label = "Comentarios", key = 'Comentarios --preguntas')
     
-    pro =promedio(amp1,amp2,spe1,spe2)
-    prof = promedio_f(fa1,fa2)
-    da = [[sco,ti,ma,eq,pa,sa,amp1,spe1,fa1,cru,amp2,spe2,fa2,vamp,nf,nl,dar,t,po,cas,caw,cs,nt,ha,hi,lu,bue,ni,bf,ve,mi,ca,no,tar,fun,es,co,com,pro,prof]]
+    
+    da = [[sco,ti,ma,eq,pa,sa,amp1,spe1,fa1,cru,amp2,spe2,fa2,vamp,nf,nl,dar,t,po,cas,caw,cs,nt,ha,hi,lu,bue,ni,bf,ve,mi,ca,no,tar,fun,es,co,com]]
     boton = st.button(label = "Ingresar" , key='Ingresar --usuario')
 
     if boton:

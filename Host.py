@@ -8,17 +8,17 @@ def main ():
     scope=['https://spreadsheets.google.com/feeds', 
         'https://www.googleapis.com/auth/drive'
         ],
-    id='1UK2mlF74IUYR_ZGuQiuYFo7zt2hCdloaAjjbU7dcv0s',
-    hoja=0
+    id='1hApyaC_iw9ms59G1zocLZkfYOP-lX6jX5TI5U4TMSLs',
+    hoja=1
     )
-    css(file_name = 'Styles\styles.css')
+    #css(file_name = 'Styles\styles.css')
 
     opciones = st.sidebar.selectbox(label = "Eliga una pagina", options = ["visualizar","resumen"], key='Eliga una pagina --usuario')
 
-    if opciones == 'visualizar':
+    if opciones == "Datos crudos":
         st.dataframe(data = hoja.leer(), key='datafraem -- usuario')
     
-    elif opciones == "Promedios":
+    elif opciones == "Resumen":
         pass
         
 if __name__ == '__main__':

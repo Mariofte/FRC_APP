@@ -1,6 +1,5 @@
 import streamlit as st 
 from Baked.Class_Hoja import Hoja
-from Baked.Blue_alince import API
 from Styles.fun_css import css
 
 def main ():
